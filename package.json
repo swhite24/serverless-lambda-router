@@ -1,0 +1,32 @@
+{
+  "name": "lambda-router",
+  "version": "1.0.0",
+  "description": "Lambda router for serverless framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel -d dist src",
+    "watch": "babel -w -d dist src",
+    "prepublish": "npm run build",
+    "lint": "eslint src/",
+    "test": "mocha test/**/*.spec.js",
+    "test:watch": "mocha -w test/**/*.spec.js"
+  },
+  "author": "Steven White <swhitewvu24@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0"
+  },
+  "dependencies": {
+    "boom": "^4.3.1"
+  }
+}
