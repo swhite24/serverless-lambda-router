@@ -13,6 +13,10 @@
   },
   "author": "Steven White <swhitewvu24@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/swhite24/serverless-lambda-router.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
