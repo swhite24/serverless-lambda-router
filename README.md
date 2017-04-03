@@ -1,1 +1,1 @@
-# lambda-router
+# serverless-lambda-router

@@ -1,5 +1,5 @@
 {
-  "name": "lambda-router",
+  "name": "serverless-lambda-router",
   "version": "1.0.0",
   "description": "Lambda router for serverless framework",
   "main": "index.js",
