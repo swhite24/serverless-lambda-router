@@ -4,7 +4,3 @@ node_js:
 script:
 - npm run lint
 - npm test
-after_success:
-- ./bin/deploy
-after_failure:
-- echo Build failed
