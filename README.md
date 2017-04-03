@@ -1,6 +1,6 @@
 # serverless-lambda-router
 
-![](https://api.travis-ci.org/swhite24/serverless-lambda-router.svg?branch=master)
+[![Build Status](https://travis-ci.org/swhite24/serverless-lambda-router.svg?branch=master)](https://travis-ci.org/swhite24/serverless-lambda-router)
 
 serverless-lambda-router is a router framework to be used within a single [lambda](https://aws.amazon.com/lambda/) function supporting an [API Gateway](https://aws.amazon.com/api-gateway/) stage. Note that this library requires a lambda runtime of `6.10`.
 

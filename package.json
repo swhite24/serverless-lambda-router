@@ -1,8 +1,8 @@
 {
   "name": "serverless-lambda-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lambda router for serverless framework",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel -d dist src",
     "watch": "babel -w -d dist src",
