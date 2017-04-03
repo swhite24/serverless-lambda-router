@@ -63,9 +63,8 @@ class LambdaRouter {
 
         // Get error body from onError handler if provided
         let body;
-        if (this.onError) {
-          body = this.onError(err, event);
-        } else {
+        if (this.onError) body = this.onError(err, event);
+        if (!body) {
           body = {
             success: false,
             error: Object.assign(err.data || {}, {
