@@ -15,6 +15,7 @@ class LambdaRouter {
    */
   constructor(options = {}) {
     this.routes = {};
+    this.prefix = options.prefix;
     this.headers = options.headers || {};
     this.onInvoke = options.onInvoke;
     this.onError = options.onError;
@@ -139,6 +140,9 @@ class LambdaRouter {
    */
   _wrap(method, path, handlers) {
     if (!this.routes[method]) this.routes[method] = [];
+    if (this.prefix) {
+      path = `${this.prefix}${path}`;
+    }
     this.routes[method].push({ path, handlers });
   }
 

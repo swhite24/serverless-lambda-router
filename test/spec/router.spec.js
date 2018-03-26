@@ -128,6 +128,19 @@ describe('Lambda Router', () => {
       expect(args[1].headers.Authorization).to.equal('foo');
     });
 
+    it('should call `onInvoke` handler when route with prefix is found', async () => {
+      const onInvoke = sinon.spy();
+      router = new LambdaRouter({ onInvoke: onInvoke, prefix: '/v1' });
+      const routeHandler = sinon.stub().resolves({ foo: 'bar' });
+      const handler = router.handler();
+
+      router.get('/foo', routeHandler);
+      await handler(getEvent('GET', '/v1/foo'), context, cb);
+
+      expect(cb).to.have.been.called;
+      expect(onInvoke).to.have.been.called;
+    });
+
     it('should call `onInvoke` handler when route is found', async () => {
       const onInvoke = sinon.spy();
       router = new LambdaRouter({ onInvoke });
