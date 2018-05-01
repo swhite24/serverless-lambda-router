@@ -97,6 +97,15 @@ class LambdaRouter {
   }
 
   /**
+   * Add handler for patch route
+   * @param {String} path
+   * @param {Function} hdlr - list of handlers to call in succession
+   */
+  patch(path, ...hdlr) {
+    this._wrap('PATCH', path, hdlr);
+  }
+
+  /**
    * Add handler for post route.
    * @param {String} path
    * @param {Function} hdlr - list of handlers to call in succession
